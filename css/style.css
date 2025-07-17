@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.game-board{
+    width: 100%;
+    height: 500px;
+    border-bottom: 15px solid #14ce0e;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87CEEB, #E0F6FF);
+}
+.tubo{
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: tubo-animado 1.4s infinite linear; 
+}
+.mario{
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+    
+}
+.pulo{
+    animation: pulo-mario 500ms ease-out;
+}
+.nuvem{
+    position: absolute;
+    width: 550px;
+    animation: nuvem-animada 20s infinite linear;
+}
+.caixa{
+    display: flex;
+    justify-content: center;
+}
+.fim{
+    background-color: #0D3B66;
+    position: absolute;
+    z-index: 99999;
+    margin-top: 10%;
+    padding: 50px;
+    text-align: center;
+    display: none;
+}
+.fim h1{
+    font-size: 5rem;
+    color: #33A1FD;
+    text-shadow: 2px 4px 0 #0C2C4D;
+    margin-bottom: 40px;
+    font-family: "Jersey 15", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.fim button{
+    color: #FFFFFF;
+    background-color: #2980D9;
+     border: none;
+      padding: 15px 30px;
+      font-size: 1.5rem;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 2px 4px 0 #1E5FA8;
+      transition: transform 0.2s, box-shadow 0.2s;
+}
+ .fim button:hover {
+      transform: translateY(-2px);
+      box-shadow: 2px 6px 10px rgba(0,0,0,0.3);
+    }
+#score{
+    position: absolute;
+}
+@keyframes tubo-animado{
+    from{
+        right: -80px;
+    }
+    to{
+        right: 100%;
+    }
+}
+@keyframes pulo-mario{
+    0%{
+        bottom: 0;
+    }
+    40%{
+        bottom: 180px;
+    }
+    50%{
+        bottom: 180px;
+    }
+    60%{
+        bottom: 180px;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+@keyframes nuvem-animada{
+    from{
+        right: -550px;
+    }
+    to{
+        right: 100%;
+    }
+}
